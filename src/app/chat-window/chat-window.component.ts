@@ -1,7 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
-import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
-import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import {Component, OnInit} from '@angular/core';
+import {faCheckCircle, faPaperPlane, faUserCircle} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-chat-window',
@@ -13,7 +11,8 @@ export class ChatWindowComponent implements OnInit {
   faCheckCircle = faCheckCircle;
   faPaperPlane = faPaperPlane;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

@@ -1,20 +1,16 @@
 .left {
   border-right: 1px solid #cccccc;
-
   .top {
     background: #F5F5F5;
     padding: 10px 20px;
     border-bottom: 1px solid #ccc;
-
     .user {
       position: relative;
       margin-bottom: 5px;
-
       .faUser {
         color: #777E86;
         font-size: 25px;
       }
-
       .faCheck {
         color: green;
         font-size: 10px;
@@ -23,11 +19,9 @@
         top: 17px;
       }
     }
-
     .search {
       position: relative;
       padding-top: 10px;
-
       .faSearch {
         font-weight: 300;
         position: absolute;
@@ -35,7 +29,6 @@
         top: 20px;
         left: 10px;
       }
-
       input {
         border-radius: 20px;
         border: 1px solid #ccc;
@@ -45,15 +38,12 @@
         color: #ccc;
         width: 100%;
         outline: none;
-
         &:focus {
           border-color: #8CBBD4;
         }
       }
     }
-
   }
-
   h1 {
     font-size: 20px;
     color: #8CBBD4;
@@ -61,7 +51,6 @@
     font-weight: 300;
     background: #fff;
   }
-
   .chats {
     overflow: auto;
     height: calc(100vh - 164px);
@@ -72,9 +61,6 @@
       position: relative;
       border-bottom: 1px solid #cccccc;
       padding: 20px 10px;
-
-
-
       .faCheck {
         color: green;
         font-size: 10px;
@@ -82,25 +68,21 @@
         left: 40px;
         top: 50px;
       }
-
       .left-side {
         display: flex;
         justify-content: space-between;
-        img{
+        img {
           height: 40px;
           width: 40px;
         }
       }
-
       .text {
         padding-left: 10px;
-
         .message {
           margin: 0;
           color: #cccccc;
         }
       }
-
       .date {
         margin: 0;
       }
