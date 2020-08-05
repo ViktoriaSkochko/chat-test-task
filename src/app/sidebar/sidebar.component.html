@@ -11,155 +11,21 @@
   </div>
   <h1>Chats</h1>
   <div class="chats">
-    <div class="contact">
+    <div *ngFor="let user of users" class="contact">
+      <app-sidebar-user-item></app-sidebar-user-item>
       <div class="left-side">
+          <div>
+            <img alt="image" src="{{user.avatar}}">
+            <fa-icon [icon]="faCheckCircle" class="faCheck"></fa-icon>
+          </div>
+          <div class="text">
+            <span class="name">{{user.name}}</span>
+            <p class="message">{{user.message}}</p>
+          </div>
+        </div>
         <div>
-          <img alt="image" src="/assets/avatar/1.png">
-          <fa-icon [icon]="faCheckCircle" class="faCheck"></fa-icon>
+          <p class="date">{{user.date}}</p>
         </div>
-        <div class="text">
-          <span class="name">Alice Freeman</span>
-          <p class="message">Hello, how are you?</p>
-        </div>
-      </div>
-      <div>
-        <p class="date">Jun 17, 2020</p>
-      </div>
-    </div>
-    <div class="contact">
-      <div class="left-side">
-        <div>
-          <img alt="image" src="/assets/avatar/2.png">
-          <fa-icon [icon]="faCheckCircle" class="faCheck"></fa-icon>
-        </div>
-        <div class="text">
-          <span class="name">Josefina</span>
-          <p class="message">Hello, how are you?</p>
-        </div>
-      </div>
-      <div>
-        <p class="date">Jun 15, 2020</p>
-      </div>
-    </div>
-    <div class="contact">
-      <div class="left-side">
-        <div>
-          <img alt="image" src="/assets/avatar/3.png">
-          <fa-icon [icon]="faCheckCircle" class="faCheck"></fa-icon>
-        </div>
-        <div class="text">
-          <span class="name">Velazquez</span>
-          <p class="message">Hello, how are you?</p>
-        </div>
-      </div>
-      <div>
-        <p class="date">Mar 20, 2020</p>
-      </div>
-    </div>
-    <div class="contact">
-      <div class="left-side">
-        <div>
-          <img alt="image" src="/assets/avatar/4.png">
-          <fa-icon [icon]="faCheckCircle" class="faCheck"></fa-icon>
-        </div>
-        <div class="text">
-          <span class="name">Barrera</span>
-          <p class="message">Hello, how are you?</p>
-        </div>
-      </div>
-      <div>
-        <p class="date">Apr 13, 2020</p>
-      </div>
-    </div>
-    <div class="contact">
-      <div class="left-side">
-        <div>
-          <img alt="image" src="/assets/avatar/5.png">
-          <fa-icon [icon]="faCheckCircle" class="faCheck"></fa-icon>
-        </div>
-        <div class="text">
-          <span class="name">Haroon</span>
-          <p class="message">Hello, how are you?</p>
-        </div>
-      </div>
-      <div>
-        <p class="date">Jan 02, 2020</p>
-      </div>
-    </div>
-    <div class="contact">
-      <div class="left-side">
-        <div>
-          <img alt="image" src="/assets/avatar/6.png">
-          <fa-icon [icon]="faCheckCircle" class="faCheck"></fa-icon>
-        </div>
-        <div class="text">
-          <span class="name">Frazer</span>
-          <p class="message">Hello, how are you?</p>
-        </div>
-      </div>
-      <div>
-        <p class="date">Jan 02, 2020</p>
-      </div>
-    </div>
-    <div class="contact">
-      <div class="left-side">
-        <div>
-          <img alt="image" src="/assets/avatar/7.png">
-          <fa-icon [icon]="faCheckCircle" class="faCheck"></fa-icon>
-        </div>
-        <div class="text">
-          <span class="name">Farhan</span>
-          <p class="message">Hello, how are you?</p>
-        </div>
-      </div>
-      <div>
-        <p class="date">Jan 02, 2020</p>
-      </div>
-    </div>
-    <div class="contact">
-      <div class="left-side">
-        <div>
-          <img alt="image" src="/assets/avatar/8.png">
-          <fa-icon [icon]="faCheckCircle" class="faCheck"></fa-icon>
-        </div>
-        <div class="text">
-          <span class="name">George</span>
-          <p class="message">Hello, how are you?</p>
-        </div>
-      </div>
-      <div>
-        <p class="date">Jan 02, 2020</p>
-      </div>
-    </div>
-    <div class="contact">
-      <div class="left-side">
-        <div>
-          <img alt="image" src="/assets/avatar/9.png">
-          <fa-icon [icon]="faCheckCircle" class="faCheck"></fa-icon>
-        </div>
-        <div class="text">
-          <span class="name">Gerald</span>
-          <p class="message">Hello, how are you?</p>
-        </div>
-      </div>
-      <div>
-        <p class="date">Jan 02, 2020</p>
-      </div>
-    </div>
-    <div class="contact">
-      <div class="left-side">
-        <div>
-          <img alt="image" src="/assets/avatar/10.png">
-          <fa-icon [icon]="faCheckCircle" class="faCheck"></fa-icon>
-        </div>
-        <div class="text">
-          <span class="name">Karl</span>
-          <p class="message">Hello, how are you?</p>
-        </div>
-      </div>
-      <div>
-        <p class="date">Jan 02, 2020</p>
-      </div>
     </div>
   </div>
 </div>
