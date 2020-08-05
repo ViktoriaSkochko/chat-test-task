@@ -14,16 +14,11 @@ export class SidebarComponent implements OnInit {
   faSearch = faSearch;
 
   users = USERS;
-  selectedUser: User;
 
   constructor() {
   }
 
   ngOnInit(): void {
-  }
-
-  onSelect(user: User): void {
-    this.selectedUser = user;
   }
 
 }

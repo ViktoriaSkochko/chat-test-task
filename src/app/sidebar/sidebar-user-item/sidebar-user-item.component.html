@@ -1,1 +1,15 @@
-<p>sidebar-user-item works!</p>
+<div *ngIf="user" class="contact">
+  <div class="left-side">
+    <div>
+      <img alt="image" src="{{user.avatar}}">
+      <fa-icon [icon]="faCheckCircle" class="faCheck"></fa-icon>
+    </div>
+    <div class="text">
+      <span class="name">{{user.name}}</span>
+      <p class="message">{{user.message}}</p>
+    </div>
+  </div>
+  <div>
+    <p class="date">{{user.date}}</p>
+  </div>
+</div>

@@ -55,37 +55,5 @@
     overflow: auto;
     height: calc(100vh - 164px);
     background: #fff;
-    .contact {
-      display: flex;
-      justify-content: space-between;
-      position: relative;
-      border-bottom: 1px solid #cccccc;
-      padding: 20px 10px;
-      .faCheck {
-        color: green;
-        font-size: 10px;
-        position: absolute;
-        left: 40px;
-        top: 50px;
-      }
-      .left-side {
-        display: flex;
-        justify-content: space-between;
-        img {
-          height: 40px;
-          width: 40px;
-        }
-      }
-      .text {
-        padding-left: 10px;
-        .message {
-          margin: 0;
-          color: #cccccc;
-        }
-      }
-      .date {
-        margin: 0;
-      }
-    }
   }
 }
