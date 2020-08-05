@@ -4,6 +4,10 @@
   position: relative;
   border-bottom: 1px solid #cccccc;
   padding: 20px 10px;
+  &:hover{
+    background: #EFF0F1;
+    cursor: pointer;
+  }
   .faCheck {
     color: green;
     font-size: 10px;

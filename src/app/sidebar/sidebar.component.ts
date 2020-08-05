@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {faCheckCircle, faSearch, faUserCircle} from '@fortawesome/free-solid-svg-icons';
-import { User } from '../user';
-import { USERS } from '../chat-users';
+import {USERS} from '../chat-users';
+import {MessagesService} from "../services/messages.service";
 
 @Component({
   selector: 'app-sidebar',
@@ -14,11 +14,16 @@ export class SidebarComponent implements OnInit {
   faSearch = faSearch;
 
   users = USERS;
+  id: number;
 
-  constructor() {
+  constructor(private data: MessagesService) {
   }
 
   ngOnInit(): void {
+
   }
 
+  onSelect(id: number): void {
+    this.data.changeId(id)
+  }
 }
