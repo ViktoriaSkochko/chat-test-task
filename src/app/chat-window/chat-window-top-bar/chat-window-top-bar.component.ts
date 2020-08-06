@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {faCheckCircle} from '@fortawesome/free-solid-svg-icons';
 import {MessagesService} from "../../services/messages.service";
+import {User} from "../../user";
 
 @Component({
   selector: 'app-chat-window-top-bar',
@@ -9,14 +10,14 @@ import {MessagesService} from "../../services/messages.service";
 })
 export class ChatWindowTopBarComponent implements OnInit {
   faCheckCircle = faCheckCircle;
-  name: string;
+  user: User;
 
   constructor(private data: MessagesService) {
 
   }
 
   ngOnInit(): void {
-    this.data.currentName.subscribe(name => this.name = name)
+    this.data.currentUser.subscribe(user => this.user = user)
   }
 
 }

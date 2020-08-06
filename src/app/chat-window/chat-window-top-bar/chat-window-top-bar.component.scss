@@ -5,6 +5,11 @@
   padding: 10px;
   border-bottom: 1px solid #cccccc;
 
+  .contact {
+    display: flex;
+    align-items: center;
+  }
+
   img {
     height: 40px;
     width: 40px;

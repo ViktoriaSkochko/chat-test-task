@@ -1,19 +1,21 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {BehaviorSubject} from "rxjs";
+import {User} from "../user";
 
 @Injectable({
   providedIn: 'root'
 })
 export class MessagesService {
 
-  private messageSource = new BehaviorSubject('Alice Freeman');
-  currentName = this.messageSource.asObservable();
+  private messageSource = new BehaviorSubject(null);
+  currentUser = this.messageSource.asObservable();
 
 
-  constructor() { }
+  constructor() {
+  }
 
-  changeName(name: string) {
-    this.messageSource.next(name)
+  changeUser(user: User) {
+    this.messageSource.next(user)
   }
 
 }
