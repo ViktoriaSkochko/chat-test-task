@@ -1,0 +1,25 @@
+.top {
+  background: #F5F5F5;
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+  border-bottom: 1px solid #cccccc;
+
+  img {
+    height: 40px;
+    width: 40px;
+  }
+
+  .faCheck {
+    color: green;
+    font-size: 10px;
+    position: absolute;
+    left: 40px;
+    top: 40px;
+  }
+
+  .name {
+    font-size: 20px;
+    padding-left: 10px;
+  }
+}

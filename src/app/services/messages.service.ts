@@ -6,14 +6,14 @@ import {BehaviorSubject} from "rxjs";
 })
 export class MessagesService {
 
-  private messageSource = new BehaviorSubject(0);
-  currentId = this.messageSource.asObservable();
+  private messageSource = new BehaviorSubject('Alice Freeman');
+  currentName = this.messageSource.asObservable();
 
 
   constructor() { }
 
-  changeId(id: number) {
-    this.messageSource.next(id)
+  changeName(name: string) {
+    this.messageSource.next(name)
   }
 
 }

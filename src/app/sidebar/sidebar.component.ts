@@ -14,7 +14,7 @@ export class SidebarComponent implements OnInit {
   faSearch = faSearch;
 
   users = USERS;
-  id: number;
+  name: string;
 
   constructor(private data: MessagesService) {
   }
@@ -23,7 +23,7 @@ export class SidebarComponent implements OnInit {
 
   }
 
-  onSelect(id: number): void {
-    this.data.changeId(id)
+  onSelect(name: string): void {
+    this.data.changeName(name)
   }
 }

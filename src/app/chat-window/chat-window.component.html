@@ -1,43 +1,5 @@
 <div class="right">
-  <div class="top">
-    <div>
-      <img alt="image" src="/assets/avatar/2.png">
-      <fa-icon [icon]="faCheckCircle" class="faCheck"></fa-icon>
-    </div>
-    <div>
-      <span class="name">Josefina {{id}}</span>
-    </div>
-  </div>
-  <div class="window">
-    <div class="user-1">
-      <div>
-        <img alt="image" src="/assets/avatar/2.png">
-      </div>
-      <div>
-        <p class="message">Quisque quis aliquet ipsum, vel ullamcorper ante.</p>
-        <p class="date">4/22/20, 4:00 AM</p>
-      </div>
-    </div>
-    <div class="user-2">
-      <div>
-        <p class="message">Duis tellus odio, varius sit amet pretium at, vestibulum vel odio.</p>
-        <p class="date">4/22/20, 4:21 AM</p>
-      </div>
-    </div>
-    <div class="user-1">
-      <div>
-        <img alt="image" src="/assets/avatar/2.png">
-      </div>
-      <div>
-        <p class="message">Quisque quis aliquet ipsum, vel ullamcorper ante.</p>
-        <p class="date">4/22/20, 4:35 AM</p>
-      </div>
-    </div>
-  </div>
-  <div class="bottom">
-    <div class="send-message">
-      <input name="send" placeholder="Type your message" type="text">
-      <fa-icon [icon]="faPaperPlane" class="faSearch"></fa-icon>
-    </div>
-  </div>
+  <app-chat-window-top-bar></app-chat-window-top-bar>
+  <app-chat-window-message-history></app-chat-window-message-history>
+  <app-chat-window-bottom-bar></app-chat-window-bottom-bar>
 </div>

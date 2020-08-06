@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {faPaperPlane} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-chat-window-bottom-bar',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./chat-window-bottom-bar.component.scss']
 })
 export class ChatWindowBottomBarComponent implements OnInit {
+  faPaperPlane = faPaperPlane;
 
   constructor() { }
 
