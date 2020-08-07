@@ -3,5 +3,11 @@ export interface User {
   avatar: string;
   name: string;
   message: string;
+  messages?: Message[];
   date: string;
+}
+export interface Message {
+  text: string;
+  date: string;
+  isFromUser: boolean;
 }

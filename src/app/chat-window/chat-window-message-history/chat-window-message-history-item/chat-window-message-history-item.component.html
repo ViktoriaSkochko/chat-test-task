@@ -1,0 +1,17 @@
+<div class="window">
+  <div *ngIf="message.isFromUser" class="user-1">
+    <div>
+      <img alt="image" src="{{avatar}}">
+    </div>
+    <div>
+      <p class="message">{{message.text}}</p>
+      <p class="date">{{message.date}}</p>
+    </div>
+  </div>
+  <div *ngIf="!message.isFromUser" class="user-2">
+    <div>
+      <p class="message">{{message.text}}</p>
+      <p class="date">{{message.date}}</p>
+    </div>
+  </div>
+</div>

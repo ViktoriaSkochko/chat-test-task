@@ -1,0 +1,57 @@
+.window {
+  .user-1 {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 20px;
+
+    img {
+      height: 40px;
+      width: 40px;
+      margin-right: 10px;
+    }
+
+    .faCheck {
+      color: green;
+      font-size: 10px;
+      position: absolute;
+      left: 40px;
+      top: 40px;
+    }
+
+    .message {
+      margin: 0;
+      background: #3C4252;
+      color: #ffffff;
+      padding: 8px;
+      border-radius: 20px;
+      display: inline-block;
+    }
+
+    .date {
+      margin: 10px 0;
+      color: #ccc;
+    }
+  }
+
+  .user-2 {
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
+
+    .message {
+      margin: 0;
+      background: #E0E0E0;
+      color: #3C4252;
+      padding: 8px;
+      border-radius: 20px;
+      display: inline-block;
+      text-align: left;
+    }
+
+    .date {
+      margin: 10px 0;
+      color: #ccc;
+    }
+  }
+}
