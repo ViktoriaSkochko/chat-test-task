@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {faPaperPlane} from '@fortawesome/free-solid-svg-icons';
+import {FormBuilder, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-chat-window-bottom-bar',
@@ -8,10 +9,20 @@ import {faPaperPlane} from '@fortawesome/free-solid-svg-icons';
 })
 export class ChatWindowBottomBarComponent implements OnInit {
   faPaperPlane = faPaperPlane;
+  myForm: FormGroup;
 
-  constructor() { }
+  constructor(private fb: FormBuilder) {
+  }
 
   ngOnInit(): void {
+    this.myForm = this.fb.group({
+      message: ''
+    })
+  }
+
+  sendMessage() {
+    console.log(this.myForm.value.message);
+    this.myForm.reset();
   }
 
 }

@@ -1,6 +1,6 @@
 <div class="bottom">
-  <form class="send-message">
-    <input name="send" placeholder="Type your message" type="text">
-    <fa-icon [icon]="faPaperPlane" class="faSearch"></fa-icon>
+  <form [formGroup]="myForm" class="send-message">
+    <input formControlName="message" name="send" placeholder="Type your message" type="text">
+    <button (click)="sendMessage()"><fa-icon [icon]="faPaperPlane" class="faSearch"></fa-icon></button>
   </form>
 </div>
