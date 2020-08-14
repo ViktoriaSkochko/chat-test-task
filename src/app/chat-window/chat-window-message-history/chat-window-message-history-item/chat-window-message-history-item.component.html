@@ -5,13 +5,13 @@
     </div>
     <div>
       <p class="message">{{message.text}}</p>
-      <p class="date">{{message.date}}</p>
+      <p class="date">{{ currentDate | date:'dd/MM/yyyy, h:mm a' }}</p>
     </div>
   </div>
   <div *ngIf="!message.isFromUser" class="user-2">
     <div>
       <p class="message">{{message.text}}</p>
-      <p class="date">{{message.date}}</p>
+      <p class="date">{{ currentDate | date:'dd/MM/yyyy, h:mm a' }}</p>
     </div>
   </div>
 </div>

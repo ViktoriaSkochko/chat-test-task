@@ -9,6 +9,8 @@ import {Message} from "../../../user";
 export class ChatWindowMessageHistoryItemComponent implements OnInit {
   @Input() message: Message;
   @Input() avatar;
+  currentDate = new Date();
+
 
   constructor() {
   }

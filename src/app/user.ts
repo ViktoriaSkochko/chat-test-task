@@ -2,12 +2,12 @@ export interface User {
   id: number;
   avatar: string;
   name: string;
-  message: string;
   messages?: Message[];
-  date: string;
+  date: Date;
 }
+
 export interface Message {
   text: string;
-  date: string;
+  date: Date;
   isFromUser: boolean;
 }
