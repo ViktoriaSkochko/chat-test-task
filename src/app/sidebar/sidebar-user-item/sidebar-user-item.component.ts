@@ -1,6 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {faCheckCircle} from '@fortawesome/free-solid-svg-icons';
-import {User} from "../../user";
+import {Message, User} from "../../user";
 
 
 @Component({
@@ -10,11 +10,21 @@ import {User} from "../../user";
 })
 export class SidebarUserItemComponent implements OnInit {
   @Input() user: User;
+  @Input() message: Message;
   faCheckCircle = faCheckCircle;
+  currentDate = new Date();
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
 
+  getLastMessage() {
+    let text;
+    let textLength;
+    textLength = this.user.messages?.length - 1;
+    text = this.user.messages[textLength].text;
+    return text;
+  }
 }

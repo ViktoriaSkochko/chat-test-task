@@ -7,15 +7,21 @@ import {User} from "../user";
 })
 export class MessagesService {
 
-  private messageSource = new BehaviorSubject(null);
-  currentUser = this.messageSource.asObservable();
+  private userSource = new BehaviorSubject(null);
+  currentUser = this.userSource.asObservable();
 
+  private messageSource = new BehaviorSubject(null);
+  currentMessage = this.messageSource.asObservable();
 
   constructor() {
   }
 
   changeUser(user: User) {
-    this.messageSource.next(user)
+    this.userSource.next(user)
   }
 
+  changeMessage(message: string) {
+    this.messageSource.next(message);
+
+  }
 }

@@ -1,5 +1,5 @@
-<div class="window">
-  <ng-container *ngIf="user.messages.length; else elseBlock">
+<div #scrollMe class="window">
+  <ng-container *ngIf="user.messages?.length; else elseBlock">
     <app-chat-window-message-history-item
       *ngFor="let messageItem of user.messages"
       [message]="messageItem"

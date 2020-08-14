@@ -6,10 +6,13 @@
     </div>
     <div class="text">
       <span class="name">{{user.name}}</span>
-      <p class="message">{{user.message}}</p>
+      <p *ngIf="user.messages?.length"
+         class="message">
+        {{ (getLastMessage()?.length > 25) ? (getLastMessage() | slice:0:25) + '...' : (getLastMessage()) }}
+      </p>
     </div>
   </div>
   <div>
-    <p class="date">{{user.date}}</p>
+    <p class="date">{{ currentDate | date:'MMM d, y' }}</p>
   </div>
 </div>
