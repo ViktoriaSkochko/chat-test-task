@@ -11,6 +11,7 @@ import {ChatWindowTopBarComponent} from './chat-window/chat-window-top-bar/chat-
 import {ChatWindowMessageHistoryComponent} from './chat-window/chat-window-message-history/chat-window-message-history.component';
 import {ChatWindowBottomBarComponent} from './chat-window/chat-window-bottom-bar/chat-window-bottom-bar.component';
 import {ChatWindowMessageHistoryItemComponent} from './chat-window/chat-window-message-history/chat-window-message-history-item/chat-window-message-history-item.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {ChatWindowMessageHistoryItemComponent} from './chat-window/chat-window-m
   imports: [
     BrowserModule,
     FontAwesomeModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

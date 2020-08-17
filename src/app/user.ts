@@ -11,3 +11,10 @@ export interface Message {
   date: Date;
   isFromUser: boolean;
 }
+
+export interface Joke {
+  icon_url: string;
+  id: string;
+  url: string;
+  value: string;
+}
