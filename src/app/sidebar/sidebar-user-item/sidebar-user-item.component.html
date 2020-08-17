@@ -8,7 +8,7 @@
       <span class="name">{{user.name}}</span>
       <p *ngIf="user.messages?.length"
          class="message">
-        {{ (getLastMessage()?.length > 25) ? (getLastMessage() | slice:0:25) + '...' : (getLastMessage()) }}
+        {{ (getLastMessage()?.length > 23) ? (getLastMessage() | slice:0:23) + '...' : (getLastMessage()) }}
       </p>
     </div>
   </div>
