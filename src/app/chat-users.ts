@@ -84,42 +84,49 @@ export const USERS: User[] = [
     id: 4,
     avatar: '/assets/avatar/4.png',
     name: 'Barrera',
-    date: new Date()
+    date: new Date(),
+    messages: []
   },
   {
     id: 5,
     avatar: '/assets/avatar/5.png',
     name: 'Haroon',
-    date: new Date()
+    date: new Date(),
+    messages: []
   },
   {
     id: 6,
     avatar: '/assets/avatar/6.png',
     name: 'Frazer',
-    date: new Date()
+    date: new Date(),
+    messages: []
   },
   {
     id: 7,
     avatar: '/assets/avatar/7.png',
     name: 'Farhan',
-    date: new Date()
+    date: new Date(),
+    messages: []
   },
   {
     id: 8,
     avatar: '/assets/avatar/8.png',
     name: 'George',
-    date: new Date()
+    date: new Date(),
+    messages: []
   },
   {
     id: 9,
     avatar: '/assets/avatar/9.png',
     name: 'Gerald',
-    date: new Date()
+    date: new Date(),
+    messages: []
   },
   {
     id: 10,
     avatar: '/assets/avatar/10.png',
     name: 'Karl',
-    date: new Date()
+    date: new Date(),
+    messages: []
   }
 ];
