@@ -22,7 +22,7 @@ export class UserSearchComponent implements OnInit {
     })
     // subscribe to form changes
     this.myForm.get('searchFormInput').valueChanges.subscribe(searchValue => {
-      this.searchData.changeSearch(searchValue)
+      this.searchData.changeSearch(searchValue.toLowerCase())
     })
   }
 }

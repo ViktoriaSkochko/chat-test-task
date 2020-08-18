@@ -15,8 +15,7 @@ export class SidebarComponent implements OnInit {
   faCheckCircle = faCheckCircle;
 
   users = USERS;
-  user: User;
-  search: string;
+  user: User[];
 
   constructor(private data: MessagesService, private searchData: SearchService) {
   }
@@ -25,8 +24,11 @@ export class SidebarComponent implements OnInit {
     this.data.changeUser(USERS[0]);
     // subscribe to search service
     this.searchData.currentSearch.subscribe(search => {
-      this.search = search;
-      console.log(search)
+      if (search) {
+        this.users = USERS.filter(item => item.name.toLowerCase().includes(search))
+      } else {
+        this.users = USERS
+      }
     })
   }
 
