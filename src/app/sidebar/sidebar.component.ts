@@ -1,8 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import {faCheckCircle, faSearch, faUserCircle} from '@fortawesome/free-solid-svg-icons';
+import {faCheckCircle, faUserCircle} from '@fortawesome/free-solid-svg-icons';
 import {USERS} from '../chat-users';
 import {MessagesService} from "../services/messages.service";
 import {User} from "../user";
+import {SearchService} from "../services/search.service";
 
 @Component({
   selector: 'app-sidebar',
@@ -12,16 +13,21 @@ import {User} from "../user";
 export class SidebarComponent implements OnInit {
   faUserCircle = faUserCircle;
   faCheckCircle = faCheckCircle;
-  faSearch = faSearch;
 
   users = USERS;
   user: User;
+  search: string;
 
-  constructor(private data: MessagesService) {
+  constructor(private data: MessagesService, private searchData: SearchService) {
   }
 
   ngOnInit(): void {
-    this.data.changeUser(USERS[0])
+    this.data.changeUser(USERS[0]);
+    // subscribe to search service
+    this.searchData.currentSearch.subscribe(search => {
+      this.search = search;
+      console.log(search)
+    })
   }
 
   onClick(user: User): void {

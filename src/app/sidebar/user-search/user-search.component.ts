@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {faSearch} from '@fortawesome/free-solid-svg-icons';
+import {FormBuilder, FormGroup} from "@angular/forms";
+import {SearchService} from "../../services/search.service";
 
 @Component({
   selector: 'app-user-search',
@@ -6,10 +9,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-search.component.scss']
 })
 export class UserSearchComponent implements OnInit {
+  faSearch = faSearch;
+  myForm: FormGroup;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private fb: FormBuilder, private searchData: SearchService) {
   }
 
+  ngOnInit(): void {
+    // create form
+    this.myForm = this.fb.group({
+      searchFormInput: '',
+    })
+    // subscribe to form changes
+    this.myForm.get('searchFormInput').valueChanges.subscribe(searchValue => {
+      this.searchData.changeSearch(searchValue)
+    })
+  }
 }
