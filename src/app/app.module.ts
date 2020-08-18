@@ -13,6 +13,7 @@ import {ChatWindowBottomBarComponent} from './chat-window/chat-window-bottom-bar
 import {ChatWindowMessageHistoryItemComponent} from './chat-window/chat-window-message-history/chat-window-message-history-item/chat-window-message-history-item.component';
 import {HttpClientModule} from "@angular/common/http";
 import { UserSearchComponent } from './sidebar/user-search/user-search.component';
+import { MessageSearchComponent } from './chat-window/chat-window-top-bar/message-search/message-search.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { UserSearchComponent } from './sidebar/user-search/user-search.component
     ChatWindowMessageHistoryComponent,
     ChatWindowBottomBarComponent,
     ChatWindowMessageHistoryItemComponent,
-    UserSearchComponent
+    UserSearchComponent,
+    MessageSearchComponent
   ],
   imports: [
     BrowserModule,

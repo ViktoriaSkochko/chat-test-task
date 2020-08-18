@@ -1,0 +1,26 @@
+.search {
+  position: relative;
+  padding-top: 10px;
+
+  .faSearch {
+    font-weight: 300;
+    position: absolute;
+    color: #ccc;
+    top: 20px;
+    left: 10px;
+  }
+
+  input {
+    border: 1px solid #ccc;
+    background: #FAFAFA;
+    vertical-align: top;
+    padding: 8px 15px;
+    color: #ccc;
+    width: 100%;
+    outline: none;
+
+    &:focus {
+      border-color: #8CBBD4;
+    }
+  }
+}

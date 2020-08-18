@@ -1,9 +1,14 @@
 <div class="top">
-  <div>
-    <img alt="image" src="{{user.avatar}}">
-    <fa-icon [icon]="faCheckCircle" class="faCheck"></fa-icon>
+  <div class="left">
+    <div>
+      <img alt="image" src="{{user.avatar}}">
+      <fa-icon [icon]="faCheckCircle" class="faCheck"></fa-icon>
+    </div>
+    <div class="contact">
+      <span class="name">{{user.name}}</span>
+    </div>
   </div>
-  <div class="contact">
-    <span class="name">{{user.name}}</span>
+  <div>
+    <app-message-search></app-message-search>
   </div>
 </div>
