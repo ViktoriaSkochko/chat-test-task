@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {FormGroup} from "@angular/forms";
+import {FormBuilder, FormGroup} from "@angular/forms";
+import {SearchService} from "../../../services/search.service";
 
 @Component({
   selector: 'app-message-search',
@@ -8,10 +9,17 @@ import {FormGroup} from "@angular/forms";
 })
 export class MessageSearchComponent implements OnInit {
   myForm: FormGroup;
-  
-  constructor() { }
+
+  constructor(private fb: FormBuilder, private searchData: SearchService) { }
 
   ngOnInit(): void {
+    // create form
+    this.myForm = this.fb.group({
+      searchFormInput: '',
+    })
+    // subscribe to form changes
+    this.myForm.get('searchFormInput').valueChanges.subscribe(searchValue => {
+      this.searchData.changeSearchMessage(searchValue.toLowerCase())
+    })
   }
-
 }

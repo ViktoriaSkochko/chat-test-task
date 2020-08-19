@@ -8,6 +8,11 @@
   </div>
   <h1>Chats</h1>
   <div class="chats">
-    <app-sidebar-user-item *ngFor="let user of users" [user]="user" (click)="onClick(user)"></app-sidebar-user-item>
+    <app-sidebar-user-item
+      *ngFor="let user of users"
+      [user]="user"
+      (click)="onClick(user)"
+    >
+    </app-sidebar-user-item>
   </div>
 </div>

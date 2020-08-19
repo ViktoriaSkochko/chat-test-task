@@ -2,6 +2,7 @@ import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {MessagesService} from "../../services/messages.service";
 import {USERS} from "../../chat-users";
 import {Joke, Message, User} from "../../user";
+import {SearchService} from "../../services/search.service";
 
 @Component({
   selector: 'app-chat-window-message-history',
@@ -16,7 +17,7 @@ export class ChatWindowMessageHistoryComponent implements OnInit {
   currentDate = new Date();
   joke: Joke;
 
-  constructor(private data: MessagesService) {
+  constructor(private data: MessagesService, private searchData: SearchService) {
 
   }
 
@@ -52,6 +53,14 @@ export class ChatWindowMessageHistoryComponent implements OnInit {
         });
       }
     });
+    // subscribe to search service
+    this.searchData.currentSearchMessage.subscribe(search => {
+      if (search) {
+        this.user.messages = this.user.messages.filter(item => item.text.toLowerCase().includes(search))
+      } else {
+        this.user.messages = this.user.messages
+      }
+    })
   };
 
   scrollToBottom(): void {
