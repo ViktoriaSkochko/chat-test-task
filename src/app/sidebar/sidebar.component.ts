@@ -23,7 +23,7 @@ export class SidebarComponent implements OnInit {
   ngOnInit(): void {
     this.data.changeUser(USERS[0]);
     // subscribe to search service
-    this.searchData.currentSearch.subscribe(search => {
+    this.searchData.currentSearchUser.subscribe(search => {
       if (search) {
         this.users = USERS.filter(item => item.name.toLowerCase().includes(search))
       } else {
