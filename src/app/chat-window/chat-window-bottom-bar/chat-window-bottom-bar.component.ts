@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {faPaperPlane} from '@fortawesome/free-solid-svg-icons';
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {MessagesService} from "../../services/messages.service";
@@ -23,8 +23,9 @@ export class ChatWindowBottomBarComponent implements OnInit {
   }
 
   sendMessage() {
-    this.data.changeMessage(this.myForm.value.message);
-    this.myForm.reset()
-  }
-
+    if (this.myForm.value.message) {
+      this.data.changeMessage(this.myForm.value.message);
+      this.myForm.reset()
+    }
+  };
 }
