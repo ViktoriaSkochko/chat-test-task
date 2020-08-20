@@ -16,6 +16,7 @@ export class ChatWindowMessageHistoryComponent implements OnInit {
   user: User;
   currentDate = new Date();
   joke: Joke;
+  loaderIsHidden = true;
 
   constructor(private data: MessagesService, private searchData: SearchService) {
 
@@ -39,18 +40,8 @@ export class ChatWindowMessageHistoryComponent implements OnInit {
         (oneUser => oneUser.id === this.user.id)
           .messages.push(messageFromMe);
         this.scrollToBottom();
-        // message from user
-        this.data.getRandomJoke().then(joke => {
-          const messageFromUser = {
-            text: joke.value,
-            date: this.currentDate,
-            isFromUser: true,
-          };
-          this.allUsers.find
-          (oneUser => oneUser.id === this.user.id)
-            .messages.push(messageFromUser);
-          this.scrollToBottom();
-        });
+        this.showThreeDots();
+
       }
     });
     // subscribe to search service
@@ -70,5 +61,26 @@ export class ChatWindowMessageHistoryComponent implements OnInit {
       } catch (err) {
       }
     }, 1);
+  };
+
+  showThreeDots(): void {
+    if (this.user.online) {
+      this.loaderIsHidden = false;
+      setTimeout(() => {
+        // message from user
+        this.data.getRandomJoke().then(joke => {
+          const messageFromUser = {
+            text: joke.value,
+            date: this.currentDate,
+            isFromUser: true,
+          };
+          this.allUsers.find
+          (oneUser => oneUser.id === this.user.id)
+            .messages.push(messageFromUser);
+          this.scrollToBottom();
+          this.loaderIsHidden = true;
+        });
+      }, 2000);
+    }
   }
 }
