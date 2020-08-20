@@ -4,7 +4,6 @@ export interface User {
   name: string;
   messages?: Message[];
   date: Date;
-  online: boolean;
 }
 
 export interface Message {
