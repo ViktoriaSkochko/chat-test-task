@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {faCheckCircle} from '@fortawesome/free-solid-svg-icons';
+import {faCheckCircle, faTimesCircle} from '@fortawesome/free-solid-svg-icons';
 import {Message, User} from "../../user";
 
 
@@ -12,6 +12,8 @@ export class SidebarUserItemComponent implements OnInit {
   @Input() user: User;
   @Input() message: Message;
   faCheckCircle = faCheckCircle;
+  faTimesCircle = faTimesCircle;
+
   currentDate = new Date();
 
   constructor() {

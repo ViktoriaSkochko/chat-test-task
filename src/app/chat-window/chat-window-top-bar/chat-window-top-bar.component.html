@@ -2,7 +2,8 @@
   <div class="left">
     <div>
       <img alt="image" src="{{user.avatar}}">
-      <fa-icon [icon]="faCheckCircle" class="faCheck"></fa-icon>
+      <fa-icon *ngIf="user.online" [icon]="faCheckCircle" class="faCheck"></fa-icon>
+      <fa-icon *ngIf="!user.online" [icon]="faTimesCircle" class="faTimes"></fa-icon>
     </div>
     <div class="contact">
       <span class="name">{{user.name}}</span>

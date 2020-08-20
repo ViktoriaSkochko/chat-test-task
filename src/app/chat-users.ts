@@ -6,6 +6,7 @@ export const USERS: User[] = [
     avatar: '/assets/avatar/1.png',
     name: 'Alice Freeman',
     date: new Date(),
+    online: true,
     messages: [
 
       {
@@ -40,6 +41,7 @@ export const USERS: User[] = [
     avatar: '/assets/avatar/2.png',
     name: 'Josefina',
     date: new Date(),
+    online: true,
     messages: [
       {
         text: 'Phasellus volutpat, metus quis fermentum sollicitudin',
@@ -78,6 +80,7 @@ export const USERS: User[] = [
     avatar: '/assets/avatar/3.png',
     name: 'Velazquez',
     date: new Date(),
+    online: true,
     messages: []
   },
   {
@@ -85,6 +88,7 @@ export const USERS: User[] = [
     avatar: '/assets/avatar/4.png',
     name: 'Barrera',
     date: new Date(),
+    online: false,
     messages: []
   },
   {
@@ -92,6 +96,7 @@ export const USERS: User[] = [
     avatar: '/assets/avatar/5.png',
     name: 'Haroon',
     date: new Date(),
+    online: false,
     messages: []
   },
   {
@@ -99,6 +104,7 @@ export const USERS: User[] = [
     avatar: '/assets/avatar/6.png',
     name: 'Frazer',
     date: new Date(),
+    online: true,
     messages: []
   },
   {
@@ -106,6 +112,7 @@ export const USERS: User[] = [
     avatar: '/assets/avatar/7.png',
     name: 'Farhan',
     date: new Date(),
+    online: true,
     messages: []
   },
   {
@@ -113,6 +120,7 @@ export const USERS: User[] = [
     avatar: '/assets/avatar/8.png',
     name: 'George',
     date: new Date(),
+    online: false,
     messages: []
   },
   {
@@ -120,6 +128,7 @@ export const USERS: User[] = [
     avatar: '/assets/avatar/9.png',
     name: 'Gerald',
     date: new Date(),
+    online: true,
     messages: []
   },
   {
@@ -127,6 +136,7 @@ export const USERS: User[] = [
     avatar: '/assets/avatar/10.png',
     name: 'Karl',
     date: new Date(),
+    online: false,
     messages: []
   }
 ];

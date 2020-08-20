@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {faCheckCircle} from '@fortawesome/free-solid-svg-icons';
+import {faCheckCircle, faTimesCircle} from '@fortawesome/free-solid-svg-icons';
 import {MessagesService} from "../../services/messages.service";
 import {User} from "../../user";
 
@@ -10,6 +10,7 @@ import {User} from "../../user";
 })
 export class ChatWindowTopBarComponent implements OnInit {
   faCheckCircle = faCheckCircle;
+  faTimesCircle = faTimesCircle;
   user: User;
 
   constructor(private data: MessagesService) {
